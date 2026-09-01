@@ -43,10 +43,11 @@ The pipeline executes two sequential tasks:
 
 ## Local Testing
 
-To test the module locally:
-1. Place a sample audio file named `sample_farmer_query.wav` in the root directory.
-2. Run the script directly:
+To start the FastAPI server locally:
+1. Make sure your virtual environment is activated and you have copied `.env.example` to `.env`.
+2. Run the server using Uvicorn:
    ```bash
-   python modules/m2_asr_bhashini.py
+   uvicorn main:app --reload
    ```
-3. The script will encode the audio, send the payload to the Bhashini API, and print the final English translated text to the console.
+3. Open your browser and navigate to the Swagger UI: `http://localhost:8000/docs`
+4. Use the `POST /api/v1/asr/transcribe` endpoint to upload any `.wav` or `.mp3` audio file directly through your browser and see the translated text in the response!
