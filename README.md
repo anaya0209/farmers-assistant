@@ -27,8 +27,16 @@ The pipeline executes two sequential tasks:
    BHASHINI_TRANSLATION_SERVICE_ID="your_translation_service_id"
    ```
 
-2. **Install Dependencies**
-   Ensure you have installed the required python packages:
+2. **Virtual Environment & Dependencies**
+   It is highly recommended to use a virtual environment to isolate the project dependencies.
+   
+   **Create and activate the virtual environment (Windows PowerShell):**
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+   **Install the required python packages:**
    ```bash
    pip install -r requirements.txt
    ```
